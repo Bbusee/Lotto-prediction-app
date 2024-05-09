@@ -1,0 +1,56 @@
+h2 {
+    margin-left: 3vw;
+  }
+  .item {
+    margin-left: 3vw;
+  }
+  .items {
+    margin-left: 3vw;
+  }
+  ul {
+    margin-left: 3vw;
+  }
+  
+  
+  
+  @media screen and (max-width: 1160px){
+    h2 {
+      margin-left: 2vw;
+    }
+    .item {
+      margin-left: 2vw;
+    }
+    button {
+      margin-left: 2vw;
+    }
+    .items {
+      margin-left: 2vw;
+    }
+    ul {
+      margin-left: 2vw;
+    }
+  }
+  
+  @media screen and (max-width: 1160px){
+    h2 {
+      margin-left: 2vw;
+    }
+    .item {
+      margin-left: 2vw;
+    }
+    button {
+      margin-left: 2vw;
+    }
+    .items {
+      margin-left: 2vw;
+    }
+    ul {
+      margin-left: 2vw;
+    }
+  }
+  .Card2{
+    
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, white,  #97d2d5);
+  }
+  

@@ -1,0 +1,120 @@
+
+ul li a{
+    position: relative;
+    color:white;
+}
+
+ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(143, 148, 140);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+
+// footer h2 animasyon
+div .a {
+  color:white;
+    position: relative;
+    display: inline-block;
+    transition: 0.5;
+    overflow: hidden; /*kayan çizginin taşmasını önleriz*/
+    margin-bottom: 12px;
+    padding: 5px;
+   font-weight: 500;
+}
+
+div .a h2{
+    position: absolute;
+    display: block;
+}
+
+div .a h2:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+   background: linear-gradient(90deg, #000000, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+
+  div .a h2:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #000000, #03e9f4);
+    animation: animate2 1s linear infinite; /* animate 1 animasyonun adıdır*/
+    /*linear dediği hız belirticek, infinite dediği sonsuz döngü olacak yani sürekli olacak*/
+    animation-delay: 0.25s;
+  }
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+
+  div .a h2:nth-child(3){
+    right: -100%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg,#000000,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+  }
+
+  @keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+  }
+  
+  div .a h2:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg,#000000,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  
+
+  @keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+ bottom: 100%;
+    }
+  }

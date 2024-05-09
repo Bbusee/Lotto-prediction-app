@@ -1,0 +1,159 @@
+.nav-index {
+    z-index: 1;
+  }
+   .active {
+     color:#03e9f4;
+     
+   }
+  
+  
+   .nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 620px;
+    height: 50px;
+    
+    border-radius: 8px;
+    justify-content: center;
+   }
+  
+  
+   .nav  a{
+    position: relative;
+    display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 23px;
+    z-index: 1;
+  
+  
+   }
+  
+   .nav  span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(45deg,#090808,#03e9f4);
+    border-radius: 8px;
+    transition: 0.5s;
+   }
+  
+  
+   .nav a:nth-child(1):hover~span,
+   .nav a:nth-child(1).active~span {
+       left: 0;
+   }
+   
+   .nav a:nth-child(2):hover~span,
+   .nav a:nth-child(2).active~span {
+       left: 120px;
+   }
+   
+   .nav a:nth-child(3):hover~span,
+   .nav a:nth-child(3).active~span {
+       left: 250px;
+       width: 110px;
+   }
+   
+   .nav a:nth-child(4):hover~span,
+   .nav a:nth-child(4).active~span {
+       left: 370px;
+       width: 115px;
+   }
+   
+   .nav a:nth-child(5):hover~span,
+   .nav a:nth-child(5).active~span {
+       left: 490px;
+       width: 110px;
+   }
+   
+   
+   @media(max-width:824px){
+    .nav{
+   display: none;
+    }
+  }
+  
+  
+  
+  // logo  
+  .logo{
+  -webkit-text-stroke: 0.1vw white; 
+  text-transform: uppercase;
+  position: relative;
+  border-left: 2px solid #03e9f4;
+  
+  }
+  .text-shadow{
+    text-shadow: 2px 2px 2px #03e9f4;
+  
+  }
+  
+  // .logo:hover::before{
+  //   content: attr(data-text);
+  
+  //   position: absolute;
+  //   width: 0;
+  //   height: 100%;
+  //   color: #03e9f4;
+  //   left: 0;
+  //   top: 0;
+  //   -webkit-text-stroke: 0vw #333;
+  //   overflow: hidden;
+  //   animation: ani1 4s linear infinite;
+  //   border-right: 3px solid #03e9f4;
+  // }
+  // @keyframes ani1{
+  //   0%{
+  // width: 0;
+  // text-shadow: 0 0 20px rgba(255, 255, 255,0.5);
+  //   }
+  //   50%,70%{
+  //     width: 100%;
+  //     text-shadow: 0 0 20px rgba(255, 255, 255,0.5);
+  //   }
+  // }
+  
+  
+  //  .tag{
+  //   position: relative;
+  //     display: inline-block;
+  //     transition: 0.5;
+  //     overflow: hidden; /*kayan çizginin taşmasını önleriz*/
+  //     margin-bottom: 12px;
+  //     padding: 5px;
+  //    font-weight: 600;
+  //    font-size: 28px;
+  //  }
+  
+  //  .tag span{
+  //   position: absolute;
+  //   display: block;
+  //  }
+  
+  //  .tag span:nth-child(1){
+  //   top: 0;
+  //   left: -100%;
+  //   width: 100%;
+  //   height: 2px;
+  //  background: linear-gradient(90deg, #000000, #03e9f4);
+  //   animation: animate1 1s linear infinite;
+  //  }
+  
+  
+  //  @keyframes animate1 {
+  //   0% {
+  //     left: -100%;
+  //   }
+  //   50%,
+  //   100% {
+  //     left: 100%;
+  //   }
+  // }
+  
+  

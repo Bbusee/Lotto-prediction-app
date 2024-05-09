@@ -1,0 +1,19 @@
+.scroll-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%;
+     /* Change to the desired background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll-top-button b {
+    font-size: 30px; /* Adjust as needed */
+    color: rgb(255, 255, 255); /* Change to the desired text color */
+  }
+  

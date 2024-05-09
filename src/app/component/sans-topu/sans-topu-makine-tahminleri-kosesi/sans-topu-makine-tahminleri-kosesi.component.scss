@@ -1,0 +1,77 @@
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6666, #ff944d);
+    box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.2),
+    inset 0px 5px 10px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+  }
+  
+  @media screen and (min-width: 767px ) {
+    a {
+      justify-content: center;
+    }
+  }
+  
+  h2 {
+    margin-left: 3vw;
+  }
+  
+  figure {
+    margin-left: 3vw;
+  }
+  
+  button {
+    margin-left: 3vw;
+  }
+  
+  ul {
+    margin-left: 3vw;
+  }
+  
+  //@media screen and (max-width: 1188px){
+  //  .item {
+  //    margin-left: 14vw;
+  //  }
+  //  .img {
+  //    width: 70vmin;
+  //    margin-left: 2vw;
+  //  }
+  //
+  //  h2 {
+  //    margin-left: 3vw;
+  //  }
+  //
+  //  a {
+  //    margin-left: 2vw;
+  //  }
+  //
+  //  button {
+  //    margin-left: 1vw;
+  //  }
+  //
+  //  ul {
+  //    margin-left: 1vw;
+  //  }
+  //}
+  
+  @media screen and (max-width: 1160px){
+    .item {
+      margin-left: 2vw;
+    }
+  }
+  @media (max-width: 1024px) {
+    .img {
+      width: 65vmin;
+      margin-right: 10vw;
+      margin-left: 5vw;
+    }
+  }
+  .grad1{
+    
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, white,  #97d2d5);
+  }
+  

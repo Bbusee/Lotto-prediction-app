@@ -1,0 +1,50 @@
+<figure class="flex flex-col items-center justify-center p-8 text-center rounded-tr-lg">
+  <a href="super-loto-tahminleri"
+    class="flex flex-col items-center bg-position bg-[url('assets/img/super_loto.jpg')] bg-gray-500 bg-blend-multiply border border-gray-100 rounded-lg shadow md:flex-row p-12 hover:bg-gray-300 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+    style="width: 75vmin">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <a class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-white hover:no-underline">Süper Loto</a>
+      <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+        Çekiliş Tarihi:
+        {{ superLotoSonCikan.cekilisTarihi | date : "dd.MM.yyyy" }}
+      </p>
+      <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+        Çekiliş No: {{ superLotoSonCikan.cekilisNo }}
+      </p>
+      <a class="inline-flex items-center text-blue-600 hover:no-underline">
+        <app-top *ngFor="let top of toplar" [topNumber]="top"></app-top>
+      </a>
+      <a href="super-loto-tahminleri"
+        class="inline-flex items-center px-3 py-2 mt-8 text-sm font-medium text-center text-bg-slate-300 bg-cyan-100  rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-700">
+        Kolon Oluştur
+        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </a>
+
+  <div class="grad1 bg-white rounded-lg shadow-md p-6 mt-4">
+    <div class="mt-4 text-gray-700" style="text-align: justify;"><a class="font-bold text-black">Süper Loto</a>, 1 ve 60
+      arasından 6 adet sayı
+      seçmene dayalı bir oyundur. Seçtiğin her 6 sayı, bir kolon oluşturur. Tek kolon ücreti 10 TL’dir. Sisteme random
+      kolon oluşturabilirsin. Bunun için 'Kolon Oluştur' butonu senin için rastgele 6 numara seçsin!
+
+      Bir kolonda 6 rakamdan fazlasını işaretleyerek sistem oyunu oluşturabilirsin. Sistem oyunu, çoklu oyun
+      kombinasyonları geliştirir. Oyuncular altıdan fazla rakam seçerek oluşturulabilecek tüm kombinasyonları ayrı
+      kolonlar halinde otomatik olarak üretirler.
+
+      <a class="font-bold text-cyan-500" href="https://www.Millipiyangoonline.com">www.Millipiyangoonline.com</a>, Milli
+      Piyango uygulaması ve sana en yakın satış noktamızda oynayabilirsin.
+
+      <a class="font-bold text-black-100">Süper Loto</a> çekilişleri Salı, Perşembe ve Pazar günleri yapılmaktadır. Her
+      çekilişte küre içerisindeki 60 numara içinden 6 numara çekilir. Oynadığın her kolon çekilişte çıkan numaralardan
+      minimum 2, maksimum 6 tane bilirsen kazanan sen olursun! 6 bilen <a class="font-bold text-black-100">Süper
+        Loto</a> büyük ikramiyesini kazanır. Aynı ikramiye kategorisinde birden fazla kazanan olması halinde ise
+      ikramiye havuzu kazananlar arasında eşit bölüşülür.
+    </div>
+  </div>
+</figure>

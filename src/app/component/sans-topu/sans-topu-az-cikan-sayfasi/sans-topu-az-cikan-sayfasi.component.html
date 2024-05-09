@@ -1,0 +1,107 @@
+<!--<div-->
+<!--  class="items flex flex-row justify-center content-center text-center items-center"-->
+<!--&gt;-->
+<!--  <div class="w-full p-4">-->
+<!--    <div class="h-64 bg-gray-300 flex items-center justify-center"-->
+<!--         style="width: 65vw; margin: -1rem 13vw;">-->
+<!--      <p class="text-white text-center">Reklam İçeriği Burada</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<aside class="hide-on-mobile w-full lg p-4 h-4 hidden md:hidden">-->
+<!--  <div class="h-1/4 p-4" style="position: relative;">-->
+<!--    <div class="h-64 bg-gray-300 flex items-center justify-center"-->
+<!--         style="height: 160vmin; width: 25vmin;">-->
+<!--      <p class="text-white text-center">Reklam İçeriği Burada</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</aside>-->
+
+<!--<aside class="hide-on-mobile w-full lg h-4 hidden md:hidden float-right mr-6">-->
+<!--  <div class="ad h-1/4 p-2 " style="position: relative;">-->
+<!--    <div class="h-64 bg-gray-300 flex items-center justify-center"-->
+<!--         style="position: absolute; top: 0; right: 0; height: 160vmin; width: 25vmin;">-->
+<!--      <p class="text-white text-center">Reklam İçeriği Burada</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</aside>-->
+<!-- 
+<div class="p-19">
+  <div class="item bg-cyan-600 p-6 rounded-lg shadow-lg mx-auto w-96 w-2/5"
+       style="width: 70vmin;">
+    <h2 class="text-2xl text-center font-bold mb-2 text-white">
+      Şans Topu'nda Az Çıkan Toplar
+    </h2>
+  </div>
+</div>
+<div class="tables mx-auto max-w-3xl overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-center text-sm text-gray-500 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+    <tr>
+      <th scope="col" class="px-6 py-3">Az Çıkan Sayılar</th>
+      <th scope="col" class="px-6 py-3">Çıkış Adedi</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+      *ngFor="let item of azCikanlar"
+      class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+    >
+      <td class="px-6 py-4 flex items-center justify-center">
+        <app-top [topNumber]="item.key"></app-top>
+      </td>
+      <td class="px-6 py-4 text-lg font-semibold">{{ item.value }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+<div class="min-h-screen bg-slate-100">
+    <br>
+    <div class="p-19 item">
+      <div class="item bg-cyan-600 p-6 rounded-lg shadow-lg mx-auto w-96 w-2/5" style="width: 70vmin;">
+        <h2 class="text-2xl text-center font-bold mb-2 text-white">
+          Şans Topu'nda Az Çıkan Toplar
+        </h2>
+      </div>
+    </div>
+    <br>
+    <div class="tables mx-auto max-w-3xl overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-center text-sm text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-6 py-3">Çok Çıkan Sayılar</th>
+            <th scope="col" class="px-6 py-3">Çıkış Adedi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of mevcutSayfaVerisiniAl()"
+            class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <td class="px-6 py-4 flex items-center justify-center">
+              <app-top [topNumber]="item.key"></app-top>
+            </td>
+            <td class="px-6 py-4 text-lg font-semibold">{{ item.value }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Sayfalama kontrolleri -->
+    <div class="flex justify-center mt-4">
+      <button class="px-4 py-2 mx-1 bg-cyan-500 text-white rounded" (click)="sayfaDegistir(suankiSayfa - 1)"
+        [disabled]="suankiSayfa === 1">
+        Önceki
+      </button>
+      <span class="px-4 py-2 mx-1">{{ suankiSayfa }}</span>
+      <button class="px-4 py-2 mx-1 bg-cyan-500 text-white rounded" (click)="sayfaDegistir(suankiSayfa + 1)"
+        [disabled]="suankiSayfa * sayfaBasinaElemanSayisi >= azCikanlar.length">
+        Sonraki
+      </button>
+    </div>
+  
+    <br>
+  </div>

@@ -1,0 +1,35 @@
+<div class="item center max-w-screen-lg mx-auto">
+  <div class="bg-slate-100 p-6 rounded-lg text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">
+      Süper Loto Tahmin Makinesi
+    </h2>
+    <figure
+      class="flex flex-col items-center justify-center p-8 text-center bg-center bg-no-repeat bg-blend-multiply border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+      <a href=""
+        class="img flex flex-col items-center bg-[url('https://ts2.mm.bing.net/th?q=19+aral%C4%B1k+2022+s%C3%BCper+loto+sonu%C3%A7lar%C4%B1')] bg-gray-500 bg-blend-multiply border border-gray-200 rounded-lg shadow md:flex-row p-12 hover:bg-gray-400 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        style="width: 75vmin;">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <a class="mb-5 text-2xl font-bold tracking-tight text-gray-200 dark:text-white hover:no-underline"
+            href="">Süper Loto</a>
+
+          <a href="#" class="inline-flex items-center text-blue-600 hover:no-underline">
+            <app-top *ngFor="let item of makineTahmin" [topNumber]="item"></app-top>
+          </a>
+        </div>
+      </a>
+    </figure>
+
+    <button (click)="getMakineTahmin()"
+      class="bg-cyan-500 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded-full">
+      Kolon Oluştur
+    </button>
+    <div class="Card2 bg-white rounded-lg shadow-md p-6 mt-4">
+      <ul class="text-gray-900 font-medium text-start text-lg pt-6">
+      <li>
+        Yeniden ve tekrar rastgele bir sayı tahmini oluşturmak için 'Kolon Oluştur' butonunu kullanabilirsiniz. Bu
+        butonu kullanarak farklı tahminler elde edebilirsiniz. Belirlenen sayılar tamamen rastgele bir şekilde seçilir.
+        Sayısal loto tahmini mantığıyla makine tarafından belirlenir ve herhangi bir istatistiksel veriyi dikkate almaz.
+      </li>
+    </ul></div>
+  </div>
+</div>

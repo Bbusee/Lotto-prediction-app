@@ -1,0 +1,63 @@
+<figure class="flex flex-col items-center justify-center p-8 text-center rounded-b-lg md:rounded-br-lg">
+    <a href="sans-topu-tahminleri"
+      class="flex flex-col items-center bg-[url('assets/img/sans-topu.png')] bg-gray-500 bg-blend-multiply border border-gray-200 rounded-lg shadow md:flex-row p-10 hover:bg-gray-400 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+      style="width: 75vmin">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <div class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-white hover:no-underline">
+          Şans Topu
+        </div>
+        <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+          Çekiliş Tarihi:
+          {{ sansTopuSonCikan.cekilisTarihi | date : "dd.MM.yyyy" }}
+        </p>
+        <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+          Çekiliş No: {{ sansTopuSonCikan.cekilisNo }}
+        </p>
+        <a class="inline-flex items-center text-blue-600 hover:no-underline">
+          <app-top *ngFor="let top of toplar | slice : 0 : 5" [topNumber]="top"></app-top>
+  
+          <!-- <div class="sans w-12 h-12 rounded-full border-4 border-red-500 bg-white flex items-center justify-center">
+            <span class=" rounded-full flex font-bold text-5xl mb-2" style="color: red;">+</span>
+          </div> -->
+          <app-ekstra-top *ngFor="let top of toplar | slice : -1" [topNumber]="top"></app-ekstra-top>
+        </a>
+        <a href="sans-topu-tahminleri"
+          class="inline-flex items-center px-3 py-2 mt-8 text-sm font-medium text-center text-bg-slate-300 bg- height: 300px;
+          background-color: red; /* For browsers that do not support gradients */
+          background-image: linear-gradient(to bottom right, white,  #97d2d5); bg-cyan-100 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-500 dark:hover:bg-pink-600 dark:focus:ring-pink-700">
+          Kolon Oluştur
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    <div class="grad1 bg-white rounded-lg shadow-md p-6 mt-4">
+      <div class="mt-4 text-gray-700" style="text-align: justify;">Bir kolonun üst bölümünde 34, alt bölümünde 14 numara
+        bulunmaktadır. <a class="font-bold text-black">Şans Topu</a> oyunu için 34 numara arasından 5, 14 numara arasından
+        1 tanesi
+        işaretlenir. Bir veya birden fazla kolon oynanabilir. Tek kolon ücreti 5 TL’dir. <a
+          class="font-bold text-cyan-500" href="https://www.Millipiyangoonline.com">www.Millipiyangoonline.com</a>, Milli
+        Piyango uygulaması ve sana en
+        yakın satış noktamızda oynayabilirsin.
+  
+        Sen seç oyununda kolonunu ister kendi seçtiğin sayılar ile istersen de sistem tarafından rastgele seçilecek
+        sayılar
+        ile oluşturabilirsin. Sistem oyununda ise çoklu oyun kombinasyonları geliştirebilirsin. Bir kolonda üst bölümden 5
+        numaradan fazla ve/veya alt bölümden 1 numaradan fazla işaretlenmesiyle sistem oyunu oynayabilirsin. Bu durumda
+        birden çok kolon oluşturulur. Üst bölümden en fazla 10 numara, alt bölümden ise 14 numara işaretlenebilir.
+  
+        <a class="font-bold text-black-100">Şans Topu</a> çekilişleri Çarşamba ve Pazar günleri yapılır. Her çekilişte
+        küre
+        içerisindeki 34 numara içinden 5 numara, 14 numara içinden 1 numara çekilir.
+  
+        Oynadığın her kolon çekilişte çıkan numaralardan 5+1, 4+1, 4, 3+1, 3, 2+1, 1+1 veya 0+1 numara doğru tahmin
+        edersen
+        ikramiye kazanırsın. 5+1 bilen <a class="font-bold text-black-100">Şans Topu</a> büyük ikramiyesini kazanır! Aynı
+        ikramiye kategorisinde birden fazla kazanan olması halinde ise ikramiye havuzu kazananlar arasında eşit bölüşülür.
+      </div>
+    </div>
+  </figure>

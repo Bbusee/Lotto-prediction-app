@@ -1,0 +1,59 @@
+@media screen and (min-width: 767px ) {
+    a {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 950px ) {
+    .sans {
+      height: 30px;
+      width: 30px;
+    }
+    .text-yellow-500 {
+      justify-content: center;
+      font-size: large;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 500px ) {
+    .sans {
+      height: 25px;
+      width: 25px;
+    }
+    .text-yellow-500 {
+      justify-content: center;
+      font-size: large;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 440px ) {
+    .sans {
+      height: 20px;
+      width: 20px;
+    }
+    .text-yellow-500 {
+      justify-content: center;
+      font-size: medium;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 383px ) {
+    .sans {
+      height: 15px;
+      width: 15px;
+    }
+    .text-yellow-500 {
+      justify-content: center;
+      font-size: small;
+      padding: 20px;
+    }
+  }
+  .grad1{
+    height: 3 00px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, white,  #97d2d5);
+  }
+  
+  

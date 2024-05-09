@@ -1,0 +1,14 @@
+@media screen and (min-width: 767px) {
+  a {
+    justify-content: center;
+  }
+}
+.bg-position {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grad1{
+  height: 3 00px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, white,  #97d2d5);
+}

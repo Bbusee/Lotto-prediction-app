@@ -1,0 +1,20 @@
+@media screen and (min-width: 767px) {
+    a {
+      justify-content: center;
+    }
+    
+  }
+  
+  
+  .paragrafstyle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    width: 200px;
+    height: 300px;
+  } 
+  .grad1{
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, white,  #97d2d5);
+  }

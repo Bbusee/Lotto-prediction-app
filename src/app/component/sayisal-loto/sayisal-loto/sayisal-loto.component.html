@@ -1,0 +1,79 @@
+<figure class="flex flex-col items-center justify-center p-8 text-center rounded-tr-lg">
+  <a href="sayisal-loto-tahminleri"
+    class="flex flex-col items-center bg-position bg-[url('assets/img/sayisal-loto.png')] bg-gray-500 bg-blend-multiply border border-gray-100 rounded-lg shadow md:flex-row p-12 hover:bg-gray-300 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+    style="width: 75vmin">
+    <div class="flex  flex-col justify-between p-4 leading-normal">
+      <a class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-white hover:no-underline">Sayısal
+        Loto</a>
+      <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+        Çekiliş Tarihi:
+        {{ sayisalLotoSonCikan.cekilisTarihi | date : "dd.MM.yyyy" }}
+      </p>
+      <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+        Çekiliş No: {{ sayisalLotoSonCikan.cekilisNo }}
+      </p>
+      <a class="inline-flex flex-wrap items-center text-blue-600 hover:no-underline">
+        <app-top *ngFor="let top of toplar | slice : 0 : 6" [topNumber]="top"></app-top>
+        <app-joker-top *ngFor="let top of toplar | slice : -2:-1" [topNumber]="top"></app-joker-top>
+        <app-bonus-top *ngFor="let top of toplar | slice : -1" [topNumber]="top"></app-bonus-top>
+      </a>
+      <a href="sayisal-loto-tahminleri"
+        class="buton inline-flex items-center px-3 py-2 mt-8 text-sm font-medium text-center text-bg-slate-300 bg-cyan-100 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Kolon Oluştur
+        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </a>
+  <div class="grad1 bg-white rounded-lg shadow-md p-2 mt-4">
+    <div class="mt-4 text-gray-700" style="text-align: justify;"><a
+        class="paragrafstyle font-bold font-style: italic; text-black">Çılgın Sayısal
+        Loto</a>'ya
+      katılmak için 90 sayı
+      arasından 6 şanslı numara seçmen ve oynadığın her kolon için 10 TL, Süper Star’lı kolon için ise 15 TL ödemen
+      yeterli. Süper Star’ı oynamak için aynı zamanda Sayısal Loto’yu da oynamak mecburidir.
+
+      <a class="paragrafstyle font-bold text-cyan-500"
+        href="https://www.Millipiyangoonline.com">www.Millipiyangoonline.com</a>, Milli
+      Piyango Şans Oyunları uygulamaları ve tüm bayiler üzerinden oynayabilirsin. Sen Seç ve Sistem Oyunu modlarında
+      oynama seçeneği bulunmaktadır;
+
+
+      Sen Seç modunda, 90 numaradan oluşan <a class="paragrafstyle font-bold text-black-100">Çılgın Sayısal Loto</a>
+      numaraları
+      arasından istediğin 6 numarayı kendin seçebilir veya sisteme seçtirebilirsin, böylece kolonunu hızlı bir şekilde
+      oluşturabilirsin.
+
+      Sistem Oyunu modunda ise en az 7 en fazla 19 adet <a class="paragrafstyle font-bold text-black-100">Çılgın Sayısal
+        Loto</a>
+      numarası seçerek sistem tarafından oluşturulan farklı kombinasyonlarla şansını artırabilirsin.
+
+      <a class="paragrafstyle font-bold text-black-100">Çılgın Sayısal Loto</a> çekilişleri Pazartesi, Çarşamba ve
+      Cumartesi günleri
+      yapılmaktadır. Her çekilişte küre içerisindeki 90 numara içinden 6 numara + 1 numara (Joker) ve farklı bir küre
+      içerisindeki 90 numara içinden 1 Süper Star numarası çekilir.
+
+      Oynadığın her kolon için doğru tahminlerde bulunman durumunda 6, 5+1 (Joker), 5, 4, 3 veya 2 numarayı tutturarak
+      ikramiye kazanma şansın bulunmaktadır.
+
+      <a class="paragrafstyle font-bold text-black-100">Çılgın Sayısal Loto</a>'nun büyük ikramiyesini 6 numarayı doğru
+      tahmin eden kişi
+      kazanır! Eğer aynı ikramiye kategorisinde birden fazla kazanan olursa, ikramiye havuzu kazananlar arasında eşit
+      olarak bölüştürülür.
+    </div>
+  </div>
+  <!--    <div class="flex flex-col justify-center p-4">-->
+  <!--      <p>Çılgın Sayısal Loto'ya katılmak için 90 sayı arasından 6 şanslı numara seçmen ve tek bir kolon için 6 TL ödemen yeterli!</p>-->
+  <!--      <p><a class="font-bold text-black" href="https://www.Millipiyangoonline.com">www.Millipiyangoonline.com</a>, Milli Piyango Şans Oyunları uygulamaları ve tüm bayiler üzerinden oynayabilirsin. Sen Seç ve Sistem Oyunu modlarında oynama seçeneği bulunmaktadır;</p>-->
+  <!--      <p>Sen Seç modunda, 90 numaradan oluşan Çılgın Sayısal Loto numaraları arasından istediğin 6 numarayı kendin seçebilir veya sisteme seçtirebilirsin, böylece kolonunu hızlı bir şekilde oluşturabilirsin.</p>-->
+  <!--      <p>Sistem Oyunu modunda ise en az 7 en fazla 19 adet Çılgın Sayısal Loto numarası seçerek sistem tarafından oluşturulan farklı kombinasyonlarla şansını artırabilirsin.</p>-->
+  <!--      <p>Çılgın Sayısal Loto çekilişleri Pazartesi, Çarşamba ve Cumartesi günleri yapılmaktadır. Her çekilişte, 90 numara içerisinden 6 numara ve 1 Joker numarası çekilmektedir. Joker numarası, çekilen rakamlardan herhangi biri tekrar çekilmeden belirlenmektedir.</p>-->
+  <!--      <p>Oynadığın her kolon için doğru tahminlerde bulunman durumunda 6, 5+1 (Joker), 5, 4, 3 veya 2 numarayı tutturarak ikramiye kazanma şansın bulunmaktadır.</p>-->
+  <!--      <p>Çılgın Sayısal Loto'nun büyük ikramiyesini 6 numarayı doğru tahmin eden kişi kazanır! Eğer aynı ikramiye kategorisinde birden fazla kazanan olursa, ikramiye havuzu kazananlar arasında eşit olarak bölüştürülür.</p>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</figure>

@@ -1,0 +1,51 @@
+<div class="flex flex-col items-center justify-center p-8 text-center rounded-bl-lg">
+    <a href="on-numara-tahminleri"
+      class="flex flex-col items-center bg-[url('assets/img/on-numara.png')] bg-gray-500 bg-blend-multiply border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-400 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
+      style="width: 75vmin">
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <a class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-white hover:no-underline" href="">On
+          Numara</a>
+        <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+          Çekiliş Tarihi:
+          {{ onNumaraSonCikan.cekilisTarihi | date : "dd.MM.yyyy" }}
+        </p>
+        <p class="mb-3 font-normal text-gray-200 dark:text-gray-400">
+          Çekiliş No: {{ onNumaraSonCikan.cekilisNo }}
+        </p>
+        <a class="flex flex-wrap items-center text-blue-600 hover:no-underline">
+          <app-top *ngFor="let top of toplar" [topNumber]="top"></app-top>
+        </a>
+        <a href="on-numara-tahminleri"
+          class="inline-flex items-center px-3 py-2 mt-8 text-sm font-medium text-center text-bg-slate-300  bg-cyan-100 rounded-lg hover:bg-gray-300  focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-600">
+          Kolon Oluştur
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </a>
+    <div class="grad1 bg-white rounded-lg shadow-md p-6 mt-4">
+      <div class="mt-4 text-gray-700" style="text-align: justify;"><a class="font-bold text-black">On Numara</a> oyunu
+        için bir kolonda 80 numara bulunmaktadır. 80 numaradan 10 tanesi işaretlenir. Bir veya birden fazla kolon
+        oynanabilir. Tek kolon ücreti 5 TL’dir. <a class="font-bold text-cyan-500"
+          href="https://www.Millipiyangoonline.com">www.Millipiyangoonline.com</a>, Milli Piyango uygulaması ve sana en
+        yakın satış noktamızda oynayabilirsin.
+  
+        Sen seç oyununda kolondaki numaralarınızı oyun terminali üzerinden kendiniz seçebileceğiniz gibi, Rastgele
+        sayılar'dan da oluşturabilirsin. Sistem oyununda ise çoklu oyun kombinasyonları geliştirebilirsin. Bir kolonda
+        10’dan fazla numara işaretlenirse, sistem ondan fazla seçilen numaralarla oluşturulabilecek tüm kombinasyonları
+        ayrı kolonlar halinde oluşturur. En fazla 15 numara işaretlenebilir.
+  
+        <a class="font-bold text-black-100">On Numara</a> çekilişleri Pazartesi ve Cuma günleri yapılır. Her çekilişte
+        küre içerisindeki 80 numara içinden 22 numara çekilir.
+  
+        Oynadığın her kolon için çekilişte çıkan numaralardan 10, 9, 8, 7, 6 numara doğru tahmin edersen veya hiçbir
+        numarayı tahmin edemezsen ikramiye kazanırsın. 10 numara bilen <a class="font-bold text-black-100">On Numara</a>
+        büyük ikramiyesini kazanır! Aynı ikramiye kategorisinde birden fazla kazanan olması halinde ise ikramiye havuzu
+        kazananlar arasında eşit bölüşülür.
+      </div>
+    </div>
+  </div>

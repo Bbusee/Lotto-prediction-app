@@ -1,0 +1,68 @@
+<div class="center max-w-screen-lg mx-auto">
+    <div class="bg-slate-100 p-6 rounded-lg text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">
+        On Numara İçin Tahmin Motoru
+      </h2>
+      <div class="item flex flex-row content-center justify-center mr-4 space-x-4">
+        <div>
+          <input id="inline-radio" type="radio" [(ngModel)]="selectedTahminTip" [value]="tahminTip.COK_CIKAN"
+            name="inline-radio-group"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="inline-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Çok Çıkanlar</label>
+        </div>
+        <!-- </div> -->
+        <div>
+          <input id="inline-2-radio" type="radio" [(ngModel)]="selectedTahminTip" [value]="tahminTip.AZ_CIKAN"
+            name="inline-radio-group"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="inline-2-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Az
+            Çıkanlar</label>
+        </div>
+        <div>
+          <input id="inline-3-radio" type="radio" [(ngModel)]="selectedTahminTip" [value]="tahminTip.YAKIN_ZAMAN"
+            name="inline-radio-group"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="inline-3-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yakın Zamanda
+            Çıkanlar</label>
+        </div>
+        <div>
+          <input id="inline-4-radio" type="radio" [(ngModel)]="selectedTahminTip" [value]="tahminTip.UZAK_ZAMAN"
+            name="inline-radio-group"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="inline-4-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Uzun Süredir
+            Çıkmayanlar</label>
+        </div>
+  
+        <div>
+          <input id="inline-6-radio" type="radio" [(ngModel)]="selectedTahminTip" [value]="tahminTip.RASTGELE"
+            name="inline-radio-group"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label for="inline-6-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rastgele</label>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <button (click)="getTahmin()"
+        class="bg-cyan-500 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded-full mt-8">
+        Kolon Oluştur
+      </button>
+      <a href=""
+        class="flex flex-col items-center bg-blend-multiply bg-gray-300 rounded-lg p-12 hover:bg-gray-500 hover:scale-110 transition duration-500 hover:duration-1000 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mt-8">
+        <div class="items text-center flex flex-col justify-between  leading-normal">
+          <a href="#" class="inline-flex items-center text-blue-600 hover:no-underline">
+            <app-top *ngFor="let item of toplar" [topNumber]="item"></app-top>
+          </a>
+        </div>
+      </a>
+      <div class="grad1 bg-white rounded-lg shadow-md p-2 mt-4">
+      <ul class="text-gray-900 font-medium text-start text-lg pt-6">
+        <li>
+          Kolon Oluştur butonunu tekrar tekrar kullanarak farklı tahminler alabilirsiniz. Belirlenen sayılar seçtiğiniz
+          istatistiğe göre belirlenir. Beş farklı istatistik seçeneği bulunmaktadır. En çok çıkan sayılara göre, en az
+          çıkan sayılara göre, en yakın zamanda çıkan sayılara göre, uzun süredir çıkmayan sayılara göre, birbirlerini
+          takip eden sayılara göre ve rastgele sayılara göre tahminler oluşturabilirsiniz. İstatistiklerden en fazla bir
+          tanesini seçebilir ve buna göre tahminlerinizi belirleyebilirsiniz.</li>
+      </ul></div>
+    </div>
+  </div>
